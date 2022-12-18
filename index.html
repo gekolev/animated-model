@@ -102,7 +102,7 @@
 
 
 
-    <div id="controls">
+    <div style="display:none;" id="controls">
 
         <label for="animation-speed-slider">
             Speed: <span id="animation-speed-value">1</span> 
@@ -311,55 +311,57 @@
 
             function load_animations() {
 
-                gltf_loader.load( '../_models/look-around.glb', function ( gltf ) {
+                // gltf_loader.load( '../_models/look-around.glb', function ( gltf ) {
 
-                    console.log( "Look Around animation loaded" );
+                //     console.log( "Look Around animation loaded" );
                    
-                    action_2 = mixer.clipAction(gltf.animations[0]);
-                    actions.push(action_2);
+                //     action_2 = mixer.clipAction(gltf.animations[0]);
+                //     actions.push(action_2);
 
-                    }, 
-                    function ( xhr ) {
-                        console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
-                    },
-                    function ( error ) {
-                        console.log( 'Error loading file' );
-                    }   
-                );
-
-
-
-                gltf_loader.load('../_models/gangnam-style.glb', function ( gltf ) {
-
-                    console.log( "Gangnam Style animation loaded" );
-
-                    action_3 = mixer.clipAction(gltf.animations[0]);
-                    actions.push(action_3);
-
-                    }, 
-                    function ( xhr ) {
-                        console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
-                    },
-                    function ( error ) {
-                        console.log( 'Error loading file' );
-                    }   
-                );
+                //     }, 
+                //     function ( xhr ) {
+                //         console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
+                //     },
+                //     function ( error ) {
+                //         console.log( 'Error loading file' );
+                //     }   
+                // );
 
 
-                gltf_loader.load( '../_models/yawn.glb', function ( gltf ) {
 
-                    console.log( "Yawn animation loaded" );
-                    action_4 = mixer.clipAction(gltf.animations[0]);
-                    actions.push(action_4);
+                // gltf_loader.load('../_models/gangnam-style.glb', function ( gltf ) {
 
-                    }, 
-                    function ( xhr ) {
-                        console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
-                    },
-                    function ( error ) {
-                        console.log( 'Error loading file' );
-                    }   
-                );
+                //     console.log( "Gangnam Style animation loaded" );
+
+                //     action_3 = mixer.clipAction(gltf.animations[0]);
+                //     actions.push(action_3);
+
+                //     }, 
+                //     function ( xhr ) {
+                //         console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
+                //     },
+                //     function ( error ) {
+                //         console.log( 'Error loading file' );
+                //     }   
+                // );
+
+
+                // gltf_loader.load( '../_models/yawn.glb', function ( gltf ) {
+
+                //     console.log( "Yawn animation loaded" );
+                //     action_4 = mixer.clipAction(gltf.animations[0]);
+                //     actions.push(action_4);
+
+                //     }, 
+                //     function ( xhr ) {
+                //         console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
+                //     },
+                //     function ( error ) {
+                //         console.log( 'Error loading file' );
+                //     }   
+                // );
+
+                console.log('animations are loaded/ :)')
 
                 ui_timer();
                 document.body.removeAttribute("loading");
